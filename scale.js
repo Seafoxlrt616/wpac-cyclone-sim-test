@@ -472,7 +472,7 @@ Scale.australian = new Scale({
 
 Scale.typhoonCommittee = new Scale({
     measure: SCALE_MEASURE_TEN_MIN_KNOTS,
-    displayName: 'WMO Typhoon Committee',
+    displayName: 'Hong Kong Observatory',
     colorSchemeDisplayNames: ['Classic','Wiki'],
     flavorDisplayNames: ['Typhoon'],
     classifications: [
@@ -505,16 +505,32 @@ Scale.typhoonCommittee = new Scale({
             subtropicalSymbol: 'SSS',
             stormNom: 'Severe Tropical Storm',
             subtropicalStormNom: 'Severe Subtropical Storm',
-            stat: 'Severe',
+            stat: 'Severe Tropical Storms',
             cName: 'Severe'
         },
         {
             threshold: 64,
-            color: ['rgb(240,130,20)','#fdaf9a'],
+            color: ['rgb(240,240,20)','#ffffcc'],
             symbol: 'TY',
             stormNom: 'Typhoon',
             stat: 'Typhoons',
             cName: 'Typhoon'
+        },
+        {
+            threshold: 80,
+            color: ['rgb(240,120,20)','#ffc140'],
+            symbol: 'STY',
+            stormNom: 'Severe Typhoon',
+            stat: 'Severe Typhoons',
+            cName: 'Severe Typhoon'
+        },
+        {
+            threshold: 99,
+            color: ['rgb(250,40,250)','#ff6060'],
+            symbol: 'VTY',
+            stormNom: 'Super Typhoon',
+            stat: 'Super Typhoons',
+            cName: 'Super Typhoon'
         }
     ]
 });
