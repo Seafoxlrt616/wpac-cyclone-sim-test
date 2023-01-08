@@ -462,11 +462,10 @@ DesignationSystem.westernPacific = new DesignationSystem({
     displayName: 'Western Pacific',
     suffix: 'W',
     mainLists: [
-        ["Damrey","Haikui","Kirogi","Yun-yeung","Koinu","Bolaven","Sanba","Jelawat","Ewiniar","Maliksi","Gaemi","Prapiroon","Maria","Son-Tinh","Ampil","Wukong","Jongdari","Shanshan","Yagi","Leepi","Bebinca","Pulasan","Soulik","Cimaron","Jebi","Krathon","Barijat","Trami"],
-        ["Kong-rey","Yutu","Toraji","Man-yi","Usagi","Pabuk","Wutip","Sepat","Mun","Danas","Nari","Wipha","Francisco","Lekima","Krosa","Bailu","Podul","Lingling","Kajiki","Faxai","Peipah","Tapah","Mitag","Hagibis","Neoguri","Bualoi","Matmo","Halong"],
-        ["Nakri","Fengshen","Kalmaegi","Fung-wong","Kammuri","Phanfone","Vongfong","Nuri","Sinlaku","Hagupit","Jangmi","Mekkhala","Higos","Bavi","Maysak","Haishen","Noul","Dolphin","Kujira","Chan-hom","Linfa","Nangka","Saudel","Molave","Goni","Atsani","Etau","Vamco"],
-        ["Krovanh","Dujuan","Surigae","Choi-wan","Koguma","Champi","In-fa","Cempaka","Nepartak","Lupit","Mirinae","Nida","Omais","Conson","Chanthu","Dianmu","Mindulle","Lionrock","Kompasu","Namtheun","Malou","Nyatoh","Rai","Malakas","Megi","Chaba","Aere","Songda"],
-        ["Trases","Mulan","Meari","Ma-on","Tokage","Hinnamnor","Muifa","Merbok","Nanmadol","Talas","Noru","Kulap","Roke","Sonca","Nesat","Haitang","Nalgae","Banyan","Yamaneko","Pakhar","Sanvu","Mawar","Guchol","Talim","Doksuri","Khanun","Lan","Saola"]
+        ["Alvin","Becky","Clement","Diana","Eric","Fiona","Greg","Helen","Isaac","Jessica","Kenny","Lisa","Marco","Nicole","Otto","Phoebe","Robert","Sophia","Tony","Viola","Walter","Yvonne","Zeb"],
+        ["Amelia","Bosco","Cheryl","Derek","Evelyn","Frankie","Gloria","Harold","Ida","Joshua","Kate","Lenny","Maggie","Nathan","Olga","Philip","Rebecca","Stephen","Tanya","Vince","Wendy","York","Zia"],
+        ["Albert","Bonnie","Colin","Dora","Ernesto","Felicia","Gordon","Harriet","Ivan","Judy","Kyle","Lisa","Mike","Nancy","Owen","Percy","Ryan","Sharon","Thomas","Virginie","Wayne","Yates","Zeb"]
+        ["Alison","Billy","Chloe","Darren","Elsie","Felix","Garnet","Hugo","Isabel","Jack","Koryn","Liam","Maria","Nolan","Ophelia","Preston","Rina","Seth","Teresa","Victor","Wilda","Yago","Zoe"]    ]
     ]
 });
 
