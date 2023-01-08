@@ -465,7 +465,7 @@ DesignationSystem.westernPacific = new DesignationSystem({
         ["Alvin","Becky","Clement","Diana","Eric","Fiona","Greg","Helen","Isaac","Jessica","Kenny","Lisa","Marco","Nicole","Otto","Phoebe","Robert","Sophia","Tony","Viola","Walter","Yvonne","Zeb"],
         ["Amelia","Bosco","Cheryl","Derek","Evelyn","Frankie","Gloria","Harold","Ida","Joshua","Kate","Lenny","Maggie","Nathan","Olga","Philip","Rebecca","Stephen","Tanya","Vince","Wendy","York","Zia"],
         ["Albert","Bonnie","Colin","Dora","Ernesto","Felicia","Gordon","Harriet","Ivan","Judy","Kyle","Lisa","Mike","Nancy","Owen","Percy","Ryan","Sharon","Thomas","Virginie","Wayne","Yates","Zeb"]
-        ["Alison","Billy","Chloe","Darren","Elsie","Felix","Garnet","Hugo","Isabel","Jack","Koryn","Liam","Maria","Nolan","Ophelia","Preston","Rina","Seth","Teresa","Victor","Wilda","Yago","Zoe]
+        ["Alison","Billy","Chloe","Darren","Elsie","Felix","Garnet","Hugo","Isabel","Jack","Koryn","Liam","Maria","Nolan","Ophelia","Preston","Rina","Seth","Teresa","Victor","Wilda","Yago","Zoe"]
     ]
 });
 
