@@ -1140,7 +1140,7 @@ ENV_DEFS[SIM_MODE_WPAC].SST = {
         peakSeasonPolarTemp: 0,
         offSeasonPolarTemp: -3,
         offSeasonTropicsTemp: 26.8,
-        peakSeasonTropicsTemp: 29
+        peakSeasonTropicsTemp: 28.5
     }
 };       
 ENV_DEFS[SIM_MODE_EXTREME].SST = {
