@@ -471,7 +471,7 @@ Scale.australian = new Scale({
 });
 
 Scale.typhoonCommittee = new Scale({
-    measure: SCALE_MEASURE_TEN_MIN_KNOTS,
+    measure: SCALE_MEASURE_ONE_MIN_KMH,
     displayName: 'Hong Kong Observatory',
     colorSchemeDisplayNames: ['Classic','Wiki'],
     flavorDisplayNames: ['Typhoon'],
@@ -488,7 +488,7 @@ Scale.typhoonCommittee = new Scale({
             cName: 'Depression'
         },
         {
-            threshold: 34,
+            threshold: 63,
             color: ['rgb(20,230,20)','#00faf4'],
             subtropicalColor: ['rgb(60,220,60)','#00faf4'],
             symbol: 'S',
@@ -498,7 +498,7 @@ Scale.typhoonCommittee = new Scale({
             cName: 'Storm'
         },
         {
-            threshold: 48,
+            threshold: 88,
             color: ['rgb(180,230,20)','#ccffff'],
             subtropicalColor: ['rgb(180,220,85)','#ccffff'],
             symbol: 'STS',
@@ -509,7 +509,7 @@ Scale.typhoonCommittee = new Scale({
             cName: 'Severe'
         },
         {
-            threshold: 64,
+            threshold: 118,
             color: ['rgb(240,240,20)','#ffffcc'],
             symbol: 'TY',
             stormNom: 'Typhoon',
@@ -517,7 +517,7 @@ Scale.typhoonCommittee = new Scale({
             cName: 'Typhoon'
         },
         {
-            threshold: 80,
+            threshold: 150,
             color: ['rgb(240,120,20)','#ffc140'],
             symbol: 'STY',
             stormNom: 'Severe Typhoon',
@@ -525,7 +525,7 @@ Scale.typhoonCommittee = new Scale({
             cName: 'Severe Typhoon'
         },
         {
-            threshold: 99,
+            threshold: 185,
             color: ['rgb(250,40,250)','#ff6060'],
             symbol: 'VTY',
             stormNom: 'Super Typhoon',
