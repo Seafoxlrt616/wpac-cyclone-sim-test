@@ -781,7 +781,7 @@ UI.init = function(){
         text("Settings",0,0);
     });
 
-    settingsMenu.append(false,WIDTH/2-150,HEIGHT/4,300,30,function(s){   // storm intensity indicator
+    settingsMenu.append(false, WIDTH / 2 - 150, 3 * HEIGHT / 16, 300, 30, function(s){   // storm intensity indicator
         let b = simSettings.showStrength ? "Enabled" : "Disabled";
         s.button("Intensity Indicator: "+b,true);
     },function(){
@@ -823,6 +823,11 @@ UI.init = function(){
             landBuffer.clear();
             land.drawn = false;
         }
+            }).append(false,0,37,300,30,function(s){     // speed unit
+        let u = ['kts', 'mph', 'km/h'][simSettings.speedUnit];
+        s.button("Windspeed Unit: " + u, true);
+    },function(){
+        simSettings.setSpeedUnit("incmod", 3);
     });
 
     settingsMenu.append(false,WIDTH/2-150,7*HEIGHT/8-20,300,30,function(s){ // "Back" button
@@ -1358,6 +1363,8 @@ UI.init = function(){
             let sName = selectedStorm.getFullNameByTick(viewTick);
             let sData = selectedStorm.getStormDataByTick(viewTick);
             if(sData){
+                let sWind = sData ? sData.windSpeed : 0;
+                sWind = displayWindspeed(sWind);
                 let sKts = sData ? sData.windSpeed : 0;
                 let sMph = ktsToMph(sKts,WINDSPEED_ROUNDING);
                 let sKmh = ktsToKmh(sKts,WINDSPEED_ROUNDING);
@@ -1542,7 +1549,7 @@ UI.init = function(){
             else
                 info_row('Peak pressure', 'N/A');
             if(S.windPeak)
-                info_row('Peak wind speed', S.windPeak.windSpeed + ' kts');
+                info_row('Peak wind speed', displayWindspeed(S.windPeak.windSpeed));
             else
                 info_row('Peak wind speed', 'N/A');
             info_row('ACE', S.ACE);
@@ -1568,7 +1575,7 @@ UI.init = function(){
                 info_row('Landfalls', stats.landfalls);
                 if(stats.most_intense){
                     let most_intense = stats.most_intense.fetch();
-                    info_row('Most Intense', most_intense.getNameByTick(-1) + '\n' + most_intense.peak.pressure + ' hPa\n' + most_intense.windPeak.windSpeed + ' kts');
+                    info_row('Most Intense', most_intense.getNameByTick(-1) + '\n' + most_intense.peak.pressure + ' hPa\n' + displayWindspeed(most_intense.windPeak.windSpeed));
                 }else
                     info_row('Most Intense', 'N/A');
             }else
@@ -1874,7 +1881,8 @@ UI.init = function(){
                     let y = map(i, 0, max_wind, bBound, tBound);
                     line(lBound - BOX_WIDTH * 0.008, y, lBound, y);
                     noStroke();
-                    text(i, lBound - BOX_WIDTH * 0.01, y);
+                    let unitLocalizedWind = [i, ktsToMph(i, WINDSPEED_ROUNDING), ktsToKmh(i, WINDSPEED_ROUNDING)][simSettings.speedUnit];
+                    text(unitLocalizedWind, lBound - BOX_WIDTH * 0.01, y);
                 }
                 for(let t0 = begin_tick, t1 = t0 + ADVISORY_TICKS; t1 <= end_tick; t0 = t1, t1 += ADVISORY_TICKS){
                     let w0 = target.getStormDataByTick(t0).windSpeed;
@@ -2174,6 +2182,9 @@ function keyPressed(){
         simSettings.setShowMagGlass("toggle");
         if(UI.viewBasin) UI.viewBasin.env.updateMagGlass();
         break;
+        case 'u':
+        simSettings.setSpeedUnit("incmod", 3);
+        break;
         default:
         switch(keyCode){
             case KEY_LEFT_BRACKET:
@@ -2290,6 +2301,15 @@ function ktsToKmh(k,rnd){
     if(rnd) val = round(val/rnd)*rnd;
     return val;
 }
+
+function displayWindspeed(kts, rnd){
+    if(!rnd)
+        rnd = WINDSPEED_ROUNDING;
+    let value = [kts, ktsToMph(kts,rnd), ktsToKmh(kts,rnd)][simSettings.speedUnit];
+    let unitLabel = ['kts', 'mph', 'km/h'][simSettings.speedUnit];
+    return `${value} ${unitLabel}`;
+}
+
 
 function oneMinToTenMin(w,rnd){
     let val = w*7/8;    // simple ratio
