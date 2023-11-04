@@ -305,10 +305,6 @@ class Storm{
             }
             if(selectedStorm===this && this.basin.viewingPresent() && this.current){
                 forecastTracks.clear();
-                let p = this.current.trackForecast.points;
-                for(let n=0;n<p.length;n++){
-                    forecastTracks.point(p[n].x,p[n].y);
-                }
                 let p = this.current.trackForecast;
                 const coneCircle = hour=>{
                     const n = hour / ADVISORY_TICKS - 1;
