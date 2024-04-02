@@ -458,8 +458,20 @@ DesignationSystem.centralPacific = new DesignationSystem({
     ]
 });
 
-DesignationSystem.westernPacific = new DesignationSystem({
+DesignationSystem.westernPacific2 = new DesignationSystem({
     displayName: 'Western Pacific',
+    suffix: 'W',
+    mainLists: [    // names marked with empty comments are retired and will be replaced when replacement names are announced
+        ["Damrey","Haikui"/**/,"Kirogi","Yun-yeung","Koinu","Bolaven","Sanba","Jelawat","Ewiniar","Maliksi","Gaemi","Prapiroon","Maria","Son-Tinh","Ampil","Wukong","Jongdari","Shanshan","Yagi","Leepi","Bebinca","Pulasan","Soulik","Cimaron","Jebi","Krathon","Barijat","Trami"],
+        ["Kong-rey","Yinxing","Toraji","Man-yi","Usagi","Pabuk","Wutip","Sepat","Mun","Danas","Nari","Wipha","Francisco","Co-May","Krosa","Bailu","Podul","Lingling","Kajiki","Nongfa","Peipah","Tapah","Mitag","Ragasa","Neoguri","Bualoi","Matmo","Halong"],
+        ["Nakri","Fengshen","Kalmaegi","Fung-wong","Koto","Nokaen","Penha","Nuri","Sinlaku","Hagupit","Jangmi","Mekkhala","Higos","Bavi","Maysak","Haishen","Noul","Dolphin","Kujira","Chan-hom","Peilou","Nangka","Saudel","Narra","Gaenari","Atsani","Etau","Bang-lang"],
+        ["Krovanh","Dujuan","Surigae","Choi-wan","Koguma","Champi","In-fa","Cempaka","Nepartak","Lupit","Mirinae","Nida","Omais","Luc-binh","Chanthu","Dianmu","Mindulle","Lionrock","Tokei","Namtheun","Malou","Nyatoh","Sarbul","Amuyao","Gosari","Chaba","Aere","Songda"],
+        ["Trases","Mulan","Meari","Tsing-ma","Tokage","Ong-mang","Muifa","Merbok","Nanmadol","Talas","Hodu","Kulap","Roke","Sonca","Nesat","Haitang","Jamjari","Banyan","Yamaneko","Pakhar","Sanvu","Mawar","Guchol","Talim","Doksuri"/**/,"Khanun","Lan","Saola"/**/]
+    ]
+});
+
+DesignationSystem.westernPacific = new DesignationSystem({
+    displayName: 'Western Pacific (Alternate)',
     suffix: 'W',
     mainLists: [
         ["Alvin","Becky","Clement","Diana","Eric","Fiona","Greg","Helen","Isaac","Jessica","Kenny","Lisa","Marco","Nicole","Otto","Phoebe","Robert","Sophia","Tony","Viola","Walter","Yvonne","Zeb"],
@@ -615,6 +627,7 @@ DesignationSystem.presetDesignationSystems = [
     DesignationSystem.atlantic,
     DesignationSystem.easternPacific,
     DesignationSystem.centralPacific,
+    DesignationSystem.westernPacific2,
     DesignationSystem.westernPacific,
     DesignationSystem.PAGASA,
     DesignationSystem.northIndianOcean,
